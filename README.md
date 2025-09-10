@@ -36,23 +36,20 @@ python -m venv venv
 venv\Scripts\activate
 # On macOS/Linux
 source venv/bin/activate
+
 Install the required dependencies:
-
 Bash
-
 pip install -r requirements.txt
 
 Run database migrations:
-
 Bash
-
 python manage.py makemigrations
 python manage.py migrate
+
 Run the development server:
-
 Bash
-
 python manage.py runserver
+
 The API will be available at http://127.0.0.1:8000/.
 
 🖥️ API Endpoints
