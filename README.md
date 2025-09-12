@@ -57,7 +57,7 @@ Requires an Authorization: Bearer <access_token> header.
 Endpoint	            Method	     Description
 /api/tasks/	            GET	         Retrieve a list of all authenticated user's tasks.
 /api/tasks/	            POST	     Create a new task.
-/api/tasks/<int:pk>/	GET	         Retrieve a single task by ID.
-/api/tasks/<int:pk>/	PUT	         Fully update a task by ID.
-/api/tasks/<int:pk>/	PATCH	     Partially update a task by ID.
-/api/tasks/<int:pk>/	DELETE	     Delete a task by ID.
+/api/tasks/<int:pk>/	  GET	         Retrieve a single task by ID.
+/api/tasks/<int:pk>/	  PUT	         Fully update a task by ID.
+/api/tasks/<int:pk>/	  PATCH	     Partially update a task by ID.
+/api/tasks/<int:pk>/	  DELETE	     Delete a task by ID.
