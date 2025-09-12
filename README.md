@@ -21,16 +21,10 @@ SQLite3: The default database for Django development.
 
 ⚙️ Installation and Setup
 Clone the repository:
-
-Bash
-
 git clone https://github.com/Mayank37231/taskmanager.git
 cd taskmanager
 
 Create and activate a virtual environment:
-
-Bash
-
 python -m venv venv
 # On Windows
 venv\Scripts\activate
@@ -38,16 +32,13 @@ venv\Scripts\activate
 source venv/bin/activate
 
 Install the required dependencies:
-Bash
 pip install -r requirements.txt
 
 Run database migrations:
-Bash
 python manage.py makemigrations
 python manage.py migrate
 
 Run the development server:
-Bash
 python manage.py runserver
 
 The API will be available at http://127.0.0.1:8000/.
