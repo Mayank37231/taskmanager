@@ -25,7 +25,7 @@ Clone the repository:
 Bash
 
 git clone https://github.com/Mayank37231/taskmanager.git
-cd your-repo-name
+cd taskmanager
 
 Create and activate a virtual environment:
 
