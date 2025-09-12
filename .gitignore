@@ -50,6 +50,8 @@ htmlcov/
 venv/
 env/
 .venv/
+virtual/
+.virtual/
 
 # Django specific
 *.log
