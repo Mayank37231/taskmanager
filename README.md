@@ -47,7 +47,8 @@ The API will be available at http://127.0.0.1:8000/.
 Authentication
 Endpoint	         Method	    Description		
 /api/register/	     POST	    Register a new user.		
-/api/login/	         POST	    Authenticate a user and get access/refresh tokens.		
+/api/login/	         POST	    Authenticate a user and get access/refresh tokens.	
+/api/delete-account/ DELETE	    deleting logged-in user
 /api/token/refresh/	 POST	    Get a new access token using a refresh token.		
 
 
