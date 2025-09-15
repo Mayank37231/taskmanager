@@ -30,6 +30,16 @@ class LoginView(APIView):
             })
         return Response({"detail": "Invalid credentials"}, status=status.HTTP_401_UNAUTHORIZED)
 
+
+class UserDeleteView(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+
+    def delete(self, request):
+        user = request.user
+        user.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+    
+
 class TaskListCreateView(APIView):
     permission_classes = [permissions.IsAuthenticated]
 
