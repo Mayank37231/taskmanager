@@ -1,9 +1,12 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
+from django.contrib.auth.password_validation import validate_password
+from rest_framework.validators import UniqueValidator
 from .models import Task
 
 class UserSerializer(serializers.ModelSerializer):
-    password = serializers.CharField(write_only=True)
+    password = serializers.CharField(write_only=True, validators=[validate_password],)
+    email = serializers.EmailField(required=True,validators=[UniqueValidator(queryset=User.objects.all())])
 
     class Meta:
         model = User
@@ -17,6 +20,8 @@ class UserSerializer(serializers.ModelSerializer):
         )
 
 class TaskSerializer(serializers.ModelSerializer):
+    username = serializers.CharField(source="user.username", read_only=True)
+
     class Meta:
         model = Task
-        fields = ["id", "title", "description", "status", "due_date", "created_at"]
+        fields = ["id","username", "title", "description", "status", "due_date", "created_at"]
