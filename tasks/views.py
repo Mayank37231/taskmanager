@@ -83,7 +83,6 @@ class TaskDetailView(APIView):
         task = self.get_object(pk, request.user)
         if not task:
             return Response({"detail": "Not found."}, status=status.HTTP_404_NOT_FOUND)
-        # Partial update: pass only the data you want to change.
         serializer = TaskSerializer(task, data=request.data, partial=True)
         if serializer.is_valid():
             serializer.save(user=request.user)
